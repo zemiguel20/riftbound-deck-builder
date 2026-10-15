@@ -8,7 +8,7 @@ Dataset contains default categories, and users can add custom categories local t
 
 Desktop app and SQLite database because I do not want the trouble of hosting.
 
-UI style also inspired by Riftmana.
+UI style also inspired by PiltoverArchive.
 
 3 Views:
 - Decks (= project list tab)
