@@ -2,23 +2,20 @@
 
 ### Concept
 
-A deckbuilder for Riftbound modeled on Archidekt's structure: cards are organized by functional categories (draw, recursion, removal, ramp...) rather than only by printed type (Unit / Gear / Spell).
+A desktop deckbuilder tool for Riftbound modeled after [Archidekt](https://archidekt.com): cards are organized by functional categories (draw, recursion, removal, ramp...) rather than only by printed type (Unit / Gear / Spell). Dataset contains default categories, and users can add/remove/rename categories local to the deck they are building.
 
-Dataset contains default categories, and users can add custom categories local to the deck they are building.
+Scope focuses solely on the deckbuilding part, and leans on the philosophy of modularity and pipeline with prefered tools for each job, rather than a Swiss-knife platform. Online platforms still serve their purpose of sharing decks and collections.
 
-Desktop app and SQLite database because I do not want the trouble of hosting.
+Styling and layout similar to [Piltover Archive](https://piltoverarchive.com/), as I feel like it is very intuitive.
 
-UI style also inspired by PiltoverArchive.
+### Development
 
-3 Views:
-- Decks (= project list tab)
-- Deckbuilder (includes card browser)
-- hidden developer tab that allows updating/importing new sets and edit the categories (forms, table edit); import from Riftcodex.
+Framework: Vue + Tauri
 
+Styling and Features: Tailwind CSS, vue-draggable, vue-charts
 
-Resources:
-- https://riftmana.com
-- https://archidekt.com
-- https://riftcodex.com
-- https://developer.riotgames.com/docs/riftbound
-- https://docs.godotengine.org/en/stable/tutorials/ui/creating_applications.html
+Data: SQLite - Dataset lives as a SQLite file hosted separately in the repo. The app can fetch for new versions of the dataset file. Card images use on-demand caching, keeping the repo and app size lean.
+
+Dataset Editor: dedicated app for importing new card data and authoring default categories. [Riftcodex](https://riftcodex.com) used as source.
+
+This is a **monorepo** containing both the Deckbuilder and the Dataset Editor.
