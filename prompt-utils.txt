@@ -1,2 +1,0 @@
-Context: I am developing a desktop deck builder for Riftbound. I am using Electron, Vue, Vite, and Tailwind CSS. My background is Computer Science, game development, university student, no professional experience, little experience with web technologies. Project also serves for learning. Be both an assistant and a teacher; explain solutions you give me.
-

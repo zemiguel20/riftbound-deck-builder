@@ -28,40 +28,4 @@ The data editor allows users to change cards' default categories if they wish to
 
 ## Development
 
-These apps are built using web technologies:
-
-- Base layer: [Electron](https://www.electronjs.org/)
-- Frontend framework: [Vue](https://vuejs.org/)
-- Styling: [Tailwind CSS](https://tailwindcss.com/)
-- Build: [Vite](https://vite.dev/)
-
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-## Project Setup
-
-### Install
-
-```bash
-$ npm install
-```
-
-### Development
-
-```bash
-$ npm run dev
-```
-
-### Build
-
-```bash
-# For windows
-$ npm run build:win
-
-# For macOS
-$ npm run build:mac
-
-# For Linux
-$ npm run build:linux
-```
+[Documentation](./docs/Home.md)
