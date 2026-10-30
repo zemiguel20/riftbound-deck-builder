@@ -1,21 +1,31 @@
-# Riftbound-Archidekt
+# Riftbound Deckbuilder
 
-### Concept
+A deck builder app, built for desktop offline use. The scope is focused solely on deck building and features that support it.
 
-A desktop deckbuilder tool for Riftbound modeled after [Archidekt](https://archidekt.com): cards are organized by functional categories (draw, recursion, removal, ramp...) rather than only by printed type (Unit / Gear / Spell). Dataset contains default categories, and users can add/remove/rename categories local to the deck they are building.
+Being an offline desktop app makes it more reliable and responsive, compared to online platforms. Decks can still be exported and published to online platforms using standard formats such as deck code or text list.
 
-Scope focuses solely on the deckbuilding part, and leans on the philosophy of modularity and pipeline with prefered tools for each job, rather than a Swiss-knife platform. Online platforms still serve their purpose of sharing decks and collections.
+> [!NOTE]
+> While collection tracking might be useful for building decks with one's available card pool, collection tracking feels more natural in an online platform environment, which enables features such as trading groups. Thus, collection tracking is out of scope for now, and this app is intended for players that care little about collection features.
 
-Styling and layout similar to [Piltover Archive](https://piltoverarchive.com/), as I feel like it is very intuitive.
+This deck builder aims to strongly support deck statistics (and possibly goldfish testing). A central feature is *functional categories* (e.g: draw, recursion, removal, ramp), seen in deck builders such as [Archidekt](https://archidekt.com). Dataset may contain default categories, and users can add/remove/rename categories local to the deck they are building.
 
-### Development
+## Card Data
 
-Framework: Vue + Tauri
+The dataset lives as an embedded database file (in this case [SQLite](https://www.sqlite.org/)) that is distributed with the deck builder.
 
-Styling and Features: Tailwind CSS, vue-draggable, vue-charts
+> [!NOTE]
+> For lower download size and faster build time, the card images are downloaded in the background during runtime, rather than bundling them with the app. The app renders a readable placeholder until the respective card image is available in the device.
 
-Data: SQLite - Dataset lives as a SQLite file hosted separately in the repo. The app can fetch for new versions of the dataset file. Card images use on-demand caching, keeping the repo and app size lean.
+Data sources:
 
-Dataset Editor: dedicated app for importing new card data and authoring default categories. [Riftcodex](https://riftcodex.com) used as source.
+- [Riftcodex](https://riftcodex.com)
+- [Riot API](https://developer.riotgames.com/docs/riftbound)
+- Piltover Archive?
 
-This is a **monorepo** containing both the Deckbuilder and the Dataset Editor.
+### Data Editor
+
+The data editor allows users to change cards' default categories if they wish to. This editor also has a developer mode which allows importing new card data, and make changes and corrections, and apply them to the database.
+
+## Development
+
+[Documentation](./docs/Home.md)
