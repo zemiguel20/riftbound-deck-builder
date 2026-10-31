@@ -6,3 +6,9 @@ out
 *.log*
 .vscode
 build
+
+# Save Obsidian plugins
+.obsidian/*
+!.obsidian
+!.obsidian/community-plugins.json
+!.obsidian/core-plugins.json
