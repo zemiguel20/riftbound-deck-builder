@@ -1,6 +1,0 @@
-packages:
-  - 'deckbuilder/*'
-  - 'data/*'
-  - 'core/*'
-allowBuilds:
-  electron-winstaller: false
